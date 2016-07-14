@@ -1,4 +1,4 @@
-<base-chart class="chart"
+<base-chart *ngIf="dataLoaded" class="chart"
            [datasets]="barChartData"
            [labels]="barChartLabels"
            [options]="barChartOptions"

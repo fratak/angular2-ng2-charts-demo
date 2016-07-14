@@ -1,0 +1,28 @@
+[{
+    "labels": ["Download Sales", "In-Store Sales", "Mail Sales", "Telesales", "Corporate Sales"],
+    "options": {
+      "animation": false,
+      "responsive": true
+    },
+    "legend": true,
+    "type": "polarArea",
+    "datasets": [
+        {
+            "label": "dataset",
+            "backgroundColor": [
+              "#FF6384",
+              "#4BC0C0",
+              "#FFCE56",
+              "#E7E9ED",
+              "#36A2EB"
+            ],
+            "hoverBackgroundColor": [],
+            "borderColor": "rgba(148,159,177,1)",
+            "pointBackgroundColor": "rgba(148,159,177,1)",
+            "pointBorderColor": "#fff",
+            "pointHoverBackgroundColor": "#fff",
+            "pointHoverBorderColor": "rgba(148,159,177,0.8)",
+            "data": [300, 500, 100, 40, 120]
+        }
+    ]
+}]

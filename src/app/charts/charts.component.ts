@@ -20,6 +20,30 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
         </a>
       </span>
       |
+      <span>
+        <a [routerLink]=" ['./radarChart'] ">
+          Radar Chart
+        </a>
+      </span>
+      |
+      <span>
+        <a [routerLink]=" ['./doughnutChart'] ">
+          Doughnut Chart
+        </a>
+      </span>
+      |
+      <span>
+        <a [routerLink]=" ['./pieChart'] ">
+          Pie Chart
+        </a>
+      </span>
+      |
+      <span>
+        <a [routerLink]=" ['./polarAreaChart'] ">
+          Polar Area Chart
+        </a>
+      </span>
+      |
     </nav>
     <router-outlet></router-outlet>
   `

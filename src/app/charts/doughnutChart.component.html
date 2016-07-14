@@ -1,0 +1,10 @@
+<base-chart *ngIf="dataLoaded" class="chart"
+            [datasets]="doughnutChartData"
+            [labels]="doughnutChartLabels"
+            [options]="doughnutChartOptions"
+            [colors]="doughnutChartColours"
+            [legend]="doughnutChartLegend"
+            [chartType]="doughnutChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"
+></base-chart>

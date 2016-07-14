@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES, NgClass} from '@angular/common';
 import { Observable }     from 'rxjs/Rx';
 import {CHART_DIRECTIVES} from 'ng2-charts';
-import {LineChartService} from './lineChart.service';
+import {ChartService} from './chart.service';
 
 // webpack html imports
 let template = require('./lineChart.component.html');
@@ -11,7 +11,7 @@ let template = require('./lineChart.component.html');
   selector: 'line-chart-demo',
   template: template,
   styleUrls: ['./charts.css'], //sem isto, gráficos não aparecem
-  providers: [LineChartService],
+  providers: [ChartService],
   directives: [CHART_DIRECTIVES, NgClass, CORE_DIRECTIVES, FORM_DIRECTIVES]
 })
 
@@ -31,15 +31,15 @@ export class LineChartDemoComponent {
 
   //----------------------------------------------------------------
 
-  constructor(private lineChartService: LineChartService) {
-      console.log('--->',this.lineChartService.paramTest(2016000));
+  constructor(private lineChartService: ChartService) {
+      //console.log('--->',this.lineChartService.paramTest(2016000));
   }
 
   ngOnInit() {
     console.log('hello `LineChart` component');
     this.getLineChart();
     //this.lineChartService.paramTest("app/charts/line-chart-data.json");
-    console.debug(this.lineChartService.paramTest('teste aqui'));
+    //console.debug(this.lineChartService.paramTest('teste aqui'));
   }
 
   public randomize():void {
@@ -53,8 +53,16 @@ export class LineChartDemoComponent {
     this.lineChartData = _lineChartData;
   }
 
+  public chartClicked(e:any):void {
+    console.log(e);
+  }
+
+  public chartHovered(e:any):void {
+    console.log(e);
+  }
+
   private getLineChart() {
-    this.lineChartService.getLineChart("app/charts/line-chart-data.json").subscribe(
+    this.lineChartService.getChart("app/charts/line-chart-data.json").subscribe(
       data => this.lineChart = data,
       err => console.log("Http Request error: " + err),
       () => this.splitChartData()

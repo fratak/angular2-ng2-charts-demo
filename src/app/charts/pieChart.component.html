@@ -1,0 +1,10 @@
+<base-chart *ngIf="dataLoaded" class="chart"
+            [datasets]="pieChartData"
+            [labels]="pieChartLabels"
+            [options]="pieChartOptions"
+            [colors]="pieChartColours"
+            [legend]="pieChartLegend"
+            [chartType]="pieChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"
+></base-chart>

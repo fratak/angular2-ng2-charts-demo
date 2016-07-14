@@ -24,7 +24,11 @@ export const routes: RouterConfig = [
     canActivate: [ WebpackAsyncRoute ],
     children: [
       { path: '', component: 'LineChartDemoComponent' },  // must be included
-      { path: 'barChart', component: 'BarChartDemoComponent' }
+      { path: 'barChart', component: 'BarChartDemoComponent' },
+      { path: 'radarChart', component: 'RadarChartDemoComponent' },
+      { path: 'doughnutChart', component: 'DoughnutChartDemoComponent' },
+      { path: 'pieChart', component: 'PieChartDemoComponent' },
+      { path: 'polarAreaChart', component: 'PolarAreaChartDemoComponent' }
     ]
   },
   { path: '**',    component: NoContent },
@@ -41,7 +45,11 @@ export const asyncRoutes: AsyncRoutes = {
   'Index': require('es6-promise-loader!./+detail'), // must be exported with detail/index.ts
   'Charts': require('es6-promise-loader!./charts'),
   'LineChartDemoComponent': require('es6-promise-loader!./charts'),
-  'BarChartDemoComponent': require('es6-promise-loader!./charts')
+  'BarChartDemoComponent': require('es6-promise-loader!./charts'),
+  'RadarChartDemoComponent': require('es6-promise-loader!./charts'),
+  'DoughnutChartDemoComponent': require('es6-promise-loader!./charts'),
+  'PieChartDemoComponent': require('es6-promise-loader!./charts'),
+  'PolarAreaChartDemoComponent': require('es6-promise-loader!./charts')
 };
 
 

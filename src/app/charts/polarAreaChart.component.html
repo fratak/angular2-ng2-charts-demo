@@ -1,0 +1,10 @@
+<base-chart *ngIf="dataLoaded" class="chart"
+            [datasets]="polarAreaChartData"
+            [labels]="polarAreaChartLabels"
+            [options]="polarAreaChartOptions"
+            [colors]="polarAreaChartColours"
+            [legend]="polarAreaChartLegend"
+            [chartType]="polarAreaChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"
+></base-chart>

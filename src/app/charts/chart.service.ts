@@ -3,7 +3,7 @@ import {HTTP_PROVIDERS, Http, Response} from "@angular/http";
 import { Observable }     from 'rxjs/Rx';
 
 @Injectable()
-export class LineChartService {
+export class ChartService {
 
   //private urlString = "app/charts/line-chart-data.json";
   private testString: string;
@@ -11,7 +11,7 @@ export class LineChartService {
   constructor(private http: Http) {
   }
 
-  public getLineChart(urlString: string){
+  public getChart(urlString: string){
     return this.http
       .get(urlString)
       .map(res => res.json())

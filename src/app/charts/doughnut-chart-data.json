@@ -1,0 +1,30 @@
+[{
+    "labels": ["Download Sales", "In-Store Sales", "Mail-Order Sales"],
+    "options": {
+      "animation": false,
+      "responsive": true
+    },
+    "legend": true,
+    "type": "doughnut",
+    "datasets": [
+        {
+            "label": "dataset",
+            "backgroundColor": [
+                "#FF6384",
+                "#36A2EB",
+                "#FFCE56"
+            ],
+            "hoverBackgroundColor": [
+                "#FFCE56",
+                "#FF6384",
+                "#36A2EB"
+            ],
+            "borderColor": "rgba(148,159,177,1)",
+            "pointBackgroundColor": "rgba(148,159,177,1)",
+            "pointBorderColor": "#fff",
+            "pointHoverBackgroundColor": "#fff",
+            "pointHoverBorderColor": "rgba(148,159,177,0.8)",
+            "data": [300, 50, 100]
+        }
+    ]
+}]
